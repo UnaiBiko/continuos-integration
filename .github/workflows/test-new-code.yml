@@ -13,12 +13,12 @@ jobs:
         with:
           node-version: "12.x"
       - name: Install dependencies
-        run: npm ci
+        run: yarn ci
       - name: Pasar prettier
-        run: npm run prettier
+        run: yarn run prettier
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: Pass test
-        run: npm test
+        run: yarn test
       - name: Check build
-        run: npm build
+        run: yarn build
       - run: echo "🍏 This job's status is ${{ job.status }}."

@@ -18,7 +18,7 @@
     "eject": "react-scripts eject",
     "lint-staged": "npx lint-staged",
     "prettier": "prettier --write .",
-    "ci": "npm install"
+    "ci": "yarn install"
   },
   "lint-staged": {
     "**/*.{js,jsx}": [
