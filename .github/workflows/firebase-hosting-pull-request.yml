@@ -17,3 +17,4 @@ jobs:
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_BUSCADOR_POKEMONS }}"
           expires: 30d
           projectId: buscador-pokemons
+          channelId: live
