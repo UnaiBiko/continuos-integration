@@ -1,0 +1,26 @@
+name: PR lint, test and build
+run-name: ${{ github.actor }} is checking PR code 🚀
+on: [push]
+jobs:
+  Check-Code:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+      - name: Install dependencies
+        working-directory: front
+        run: npm ci
+      - name: Pasar prettier
+        uses: actions/checkout@v3
+        run: npm run prettier
+      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
+      - name: Pass test
+        run: npm test
+      - name: Check build
+        run: npm build
+      - run: echo "🍏 This job's status is ${{ job.status }}."

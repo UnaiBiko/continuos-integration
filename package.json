@@ -16,7 +16,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
-    "lint-staged": "npx lint-staged"
+    "lint-staged": "npx lint-staged",
+    "prettier": "prettier --write .",
+    "ci": "npm install"
   },
   "lint-staged": {
     "**/*.{js,jsx}": [
