@@ -1,0 +1,6 @@
+build
+coverage
+public
+
+#Ya esta ignorada por defecto
+node_modules
