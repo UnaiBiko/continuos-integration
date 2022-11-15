@@ -16,13 +16,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
-    "prepare": "husky install",
     "lint-staged": "npx lint-staged"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm test"
-    }
   },
   "lint-staged": {
     "**/*.{js,jsx}": [
@@ -34,6 +28,11 @@
       "react-app",
       "react-app/jest"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test"
+    }
   },
   "browserslist": {
     "production": [
