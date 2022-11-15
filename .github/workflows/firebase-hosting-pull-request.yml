@@ -12,4 +12,8 @@ jobs:
       - run: yarn ci && yarn run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
       - name: Firebase deploy
-        run: yarn firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
+        with:
+          repoToken: "${{ secrets.FIREBASE_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
+          expires: 30d
+          projectId: buscador-pokemons
