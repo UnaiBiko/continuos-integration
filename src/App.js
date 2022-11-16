@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Skipeando actions proabndo</p>
+        <p>Version final del workflow</p>
         <a
           className="App-link"
           href="https://reactjs.org"
