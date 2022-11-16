@@ -3,12 +3,12 @@ run-name: ${{ github.actor }} is checking PR code 🚀
 on: [push]
 jobs:
   Check-Code:
+    if: "contains(github.event.commits[0].message, '[skip ci]')"
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [12.x]
     steps:
-      if: "contains(github.event.commits[0].message, '[skip ci]')"
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
