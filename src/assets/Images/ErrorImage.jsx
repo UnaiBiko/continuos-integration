@@ -20,7 +20,7 @@ export const ErrorImage = () => {
           <g
             stroke="#000000"
             fill="#ffffff"
-            clip-path="url(#imagebot_5)"
+            clipPath="url(#imagebot_5)"
             id="imagebot_21"
           >
             <path
@@ -129,7 +129,7 @@ export const ErrorImage = () => {
           transform="translate(-1.80078, -1.87109) matrix(6.46913, 0, 0, -6.46913, -469.266, 3741.04)"
           id="imagebot_7"
         >
-          <g stroke="#000000" clip-path="url(#imagebot_5)" id="imagebot_8">
+          <g stroke="#000000" clipPath="url(#imagebot_5)" id="imagebot_8">
             <path
               strokeLinejoin="round"
               stroke="#000000"
@@ -148,7 +148,7 @@ export const ErrorImage = () => {
           transform="translate(-1.80078, -1.87109) matrix(6.46913, 0, 0, -6.46913, -469.266, 3741.04)"
           id="imagebot_3"
         >
-          <g stroke="#000000" clip-path="url(#imagebot_5)" id="imagebot_4">
+          <g stroke="#000000" clipPath="url(#imagebot_5)" id="imagebot_4">
             <path
               strokeLinejoin="round"
               stroke="#000000"
@@ -164,8 +164,8 @@ export const ErrorImage = () => {
         <title>System Description and Engineering</title>
         <text
           textAnchor="middle"
-          font-family="Monospace"
-          font-size="78"
+          fontFamily="Monospace"
+          fontSize="78"
           id="imagebot_24"
           y="150"
           x="244"

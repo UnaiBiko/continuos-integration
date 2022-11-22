@@ -1,16 +1,15 @@
 const POKE_API_URL = "https://pokeapi.co/api/v2/pokemon";
 
-const getData = async ({ pokeName = "", setPokemons, setFindValue }) => {
-  setFindValue(pokeName);
+const getData = async (pokeName = "") => {
   const isUniquePokemon = !!pokeName;
 
-  await fetch(`${POKE_API_URL}/${pokeName}`)
+  return await fetch(`${POKE_API_URL}/${pokeName}`)
     .then((response) => response.json())
     .then((data) => {
       const currentData = isUniquePokemon ? [data] : data.results;
-      setPokemons(currentData);
+      return currentData;
     })
-    .catch(() => setPokemons([]));
+    .catch(() => []);
 };
 
 export const pokedexUtils = { getData };

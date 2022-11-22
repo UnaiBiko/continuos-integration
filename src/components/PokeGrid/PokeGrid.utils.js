@@ -11,10 +11,9 @@ const mapPokemonPromises = (pokemons) => {
 const getPokemonsDetails = async ({ pokemons }) => {
   const promisesPokemons = mapPokemonPromises(pokemons);
 
-  await Promise.allSettled(promisesPokemons).then((allResponses) => {
+  return await Promise.allSettled(promisesPokemons).then((allResponses) => {
     const allPokemons = allResponses.reduce((allPokemons, response) => {
       if (response.status === "rejected") return allPokemons;
-
       allPokemons.push(response.value);
       return allPokemons;
     }, []);

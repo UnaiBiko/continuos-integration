@@ -6,12 +6,19 @@ export const Pokedex = () => {
   const [pokemons, setPokemons] = useState([]);
   const [findValue, setFindValue] = useState([]);
 
+  const fetchPokemons = async (pokeName = "") => {
+    const result = await pokedexUtils.getData(pokeName);
+
+    setPokemons(result);
+  };
+
   useEffect(() => {
-    pokedexUtils.getData({ setPokemons, setFindValue });
+    fetchPokemons();
   }, []);
 
   const handleChange = async (pokeName) => {
-    await pokedexUtils.getData({ pokeName, setPokemons, setFindValue });
+    setFindValue(pokeName);
+    fetchPokemons(pokeName);
   };
 
   return (
