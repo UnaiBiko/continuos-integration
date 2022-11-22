@@ -21,7 +21,7 @@ export const PokeGrid = ({ pokemons, findValue }) => {
 
   return (
     <div className="pokeGrid">
-      {completePokemons.map((pokemon) => {
+      {completePokemons?.map((pokemon) => {
         return <PokeItem {...pokemon} />;
       })}
     </div>
