@@ -1,12 +1,17 @@
 import { render, screen } from "@testing-library/react";
 import { PokeGrid } from "../PokeGrid";
+import { pokeGridUtils } from "../PokeGrid.utils";
 
 describe("PokeGrid", () => {
-  it("renders component.", () => {
-    render(<PokeGrid />);
+  it("renders component.", async () => {
+    jest
+      .spyOn(pokeGridUtils, "getPokemonsDetails")
+      .mockReturnValue([{ name: "irrelevantPokemon" }]);
 
-    const title = screen.getByText("Irrelevant");
+    render(<PokeGrid pokemons={[{}]} />);
 
-    expect(title).toBeInTheDocument();
+    const pokeName = await screen.findByText("irrelevantPokemon");
+
+    expect(pokeName).toBeInTheDocument();
   });
 });

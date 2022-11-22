@@ -1,0 +1,9 @@
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.erroText {
+  margin-top: 40px;
+  font-size: 26px;
+}

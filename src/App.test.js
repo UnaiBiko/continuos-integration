@@ -1,8 +1,13 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
+import { pokedexUtils } from "./pages/pokedex/Pokedex.utils";
 
-test("renders learn react link", () => {
+test("renders pokedex page", () => {
+  jest.spyOn(pokedexUtils, "getData").mockReturnValue([]);
+
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  const pageTitle = screen.getByText("Buscador de Pokemons");
+
+  expect(pageTitle).toBeInTheDocument();
 });

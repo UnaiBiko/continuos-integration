@@ -1,0 +1,12 @@
+.pokeItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.pokeName {
+  font-size: 18px;
+  font-weight: 600;
+}

@@ -1,0 +1,31 @@
+.pokeSearch {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pokeInput {
+  display: flex;
+  gap: 15px;
+  margin: 10px 0 0;
+}
+
+.input {
+  flex-basis: 40%;
+  padding: 10px 10px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: inherit;
+  line-height: 24px;
+  border-radius: 0.4rem;
+}
+
+.searchButton {
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  background-color: rgb(243, 39, 39);
+  color: white;
+  border: 1px solid;
+  cursor: pointer;
+}
