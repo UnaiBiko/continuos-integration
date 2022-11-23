@@ -1,11 +1,7 @@
-const POKE_API_URL = "https://pokeapi.co/api/v2/pokemon";
+import { pokeServices } from "../../services/pokemon/pokemon.services";
 
 const mapPokemonPromises = (pokemons) => {
-  return pokemons.map((pokemon) => {
-    return fetch(`${POKE_API_URL}/${pokemon.name}`).then((response) =>
-      response.json()
-    );
-  });
+  return pokemons.map(({ name }) => pokeServices.getPokeDetailsPromise(name));
 };
 
 const getPokemonsDetails = async ({ pokemons }) => {

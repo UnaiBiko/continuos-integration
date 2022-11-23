@@ -1,9 +1,20 @@
-import { Pokedex } from "./pages";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { PokeDetails, Pokedex } from "./pages";
 
 function App() {
+  const routes = createBrowserRouter([
+    {
+      path: "pokedex",
+      element: <Pokedex />,
+    },
+    {
+      path: "pokedex/:name",
+      element: <PokeDetails />,
+    },
+  ]);
   return (
     <div className="App">
-      <Pokedex />
+      <RouterProvider router={routes} />
     </div>
   );
 }

@@ -1,0 +1,58 @@
+.header{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    border-bottom: 1px solid;
+}
+
+.header > h2{
+    font-size: 40px;
+}
+
+.type{
+    background-color: burlywood;
+    height: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid black
+}
+
+.bg-green{
+    background-color: greenyellow;
+}
+
+.bg-yellow{
+    background-color: rgb(236, 150, 57);
+}
+
+.bg-blue{
+    background-color: rgb(25, 154, 223);
+}
+
+.content{
+    margin-top: 20px;
+    display: flex;
+    gap: 50px;
+}
+
+.detailsContent{
+    width: 100%;
+    
+}
+
+.abilityTable {
+    border-collapse: collapse;
+    border: 2px solid;
+    width: 100%;
+}
+
+.abilityTable > caption {
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+
+.abilityTable  th{
+    border: 2px solid;
+}
