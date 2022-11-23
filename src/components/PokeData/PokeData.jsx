@@ -9,7 +9,7 @@ const colorClassNames = {
 };
 
 export const PokeData = ({ pokemon }) => {
-  const { name, abilities, sprites, stats, types } = pokemon;
+  const { name, sprites, stats, types } = pokemon;
 
   const frontImage = pokeDataUtils.getImages(sprites);
   console.log({ pokemon });
